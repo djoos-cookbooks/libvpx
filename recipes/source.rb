@@ -28,6 +28,15 @@ libvpx_packages.each do |pkg|
   end
 end
 
+yasm_package = value_for_platform(
+  [ "ubuntu" ] => { "default" => "yasm" },
+  "default" => "yasm"
+)
+
+package yasm_package do
+  action :upgrade
+end
+
 git "#{Chef::Config[:file_cache_path]}/libvpx" do
   repository node[:libvpx][:git_repository]
   reference node[:libvpx][:git_revision]
