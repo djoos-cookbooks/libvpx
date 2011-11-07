@@ -47,8 +47,8 @@ end
 bash "compile_libvpx" do
   cwd "#{Chef::Config[:file_cache_path]}/libvpx"
   code <<-EOH
-    ./configure
+    ./configure --prefix=#{node[:libvpx][:prefix]}
     make clean && make && make install
   EOH
-  action :nothing
+  creates "#{node[:libvpx][:prefix]}/bin/vpxenc"
 end

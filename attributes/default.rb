@@ -21,6 +21,7 @@
 
 default[:libvpx][:install_method] = :source
 default[:libvpx][:git_repository] = "http://git.chromium.org/webm/libvpx.git"
+default[:libvpx][:prefix] = "/usr/local"
 
 # JW 07-06-11: Hash of commit or a HEAD should be used - not a tag. Sync action of Git
 # provider will always attempt to update the git clone if a tag is used.
