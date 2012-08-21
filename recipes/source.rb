@@ -47,7 +47,7 @@ git "#{Chef::Config[:file_cache_path]}/libvpx" do
   repository node[:libvpx][:git_repository]
   reference node[:libvpx][:git_revision]
   action :sync
-  notifies :delete, "file[#{creates_libvpx}]"
+  notifies :delete, "file[#{creates_libvpx}]", :immediately
 end
 
 bash "compile_libvpx" do
