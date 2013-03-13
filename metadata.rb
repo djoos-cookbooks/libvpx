@@ -1,3 +1,4 @@
+name             "libvpx"
 maintainer       "En Masse Entertainment"
 maintainer_email "jamie@vialstudios.com"
 license          "Apache 2.0"
