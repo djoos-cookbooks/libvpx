@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: libvpx
-# Library:: helper
+# Library:: helpers
 #
 # Copyright 2014, David Joos
 #
