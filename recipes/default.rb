@@ -2,7 +2,7 @@
 # Cookbook Name:: libvpx
 # Recipe:: default
 #
-# Copyright 2014, David Joos
+# Copyright 2014, Escape Studios
 #
 
 case node['libvpx']['install_method']

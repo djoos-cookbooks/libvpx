@@ -2,7 +2,7 @@
 # Cookbook Name:: libvpx
 # Attributes:: default
 #
-# Copyright 2014, David Joos
+# Copyright 2014, Escape Studios
 #
 
 default['libvpx']['install_method'] = :source
