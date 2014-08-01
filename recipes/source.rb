@@ -7,7 +7,7 @@
 
 include_recipe "build-essential"
 include_recipe "git"
-include_recipe "yasm"
+include_recipe "yasm::source"
 
 libvpx_packages.each do |pkg|
     package pkg do
@@ -19,6 +19,7 @@ creates_libvpx = "#{node['libvpx']['prefix']}/bin/vpxenc"
 
 file "#{creates_libvpx}" do
     action :nothing
+    subscribes :delete, "bash[compile_yasm]", :immediately
 end
 
 git "#{Chef::Config[:file_cache_path]}/libvpx" do
@@ -47,5 +48,5 @@ bash "compile_libvpx" do
         ./configure --prefix=#{node['libvpx']['prefix']} #{node['libvpx']['compile_flags'].join(' ')}
         make clean && make && make install
     EOH
-    creates "#{creates_libvpx}"
+    not_if {  ::File.exists?(creates_libvpx) }
 end
