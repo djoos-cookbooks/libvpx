@@ -7,7 +7,7 @@
 
 include_recipe "build-essential"
 include_recipe "git"
-include_recipe "yasm::source"
+include_recipe "yasm"
 
 libvpx_packages.each do |pkg|
     package pkg do
