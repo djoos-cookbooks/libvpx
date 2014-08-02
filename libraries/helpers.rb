@@ -5,17 +5,20 @@
 # Copyright 2014, Escape Studios
 #
 
+# libvpx module
 module Libvpx
-    module Helpers
-        def libvpx_packages
-        [
-            "libvpx-dev", 
-            "libvpx0"
-        ]
-        end
+  # helpers module
+  module Helpers
+    def libvpx_packages
+      ['libvpx-dev', 'libvpx0']
     end
+  end
 end
 
-class Chef::Recipe
+# Chef class
+class Chef
+  # Recipe class
+  class Recipe
     include Libvpx::Helpers
+  end
 end
