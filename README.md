@@ -43,7 +43,7 @@ Copyright: 2011-2013, En Masse Entertainment, Inc
 
 Author: David Joos <david.joos@escapestudios.com>
 Author: Escape Studios Development <dev@escapestudios.com>
-Copyright: 2014, Escape Studios
+Copyright: 2014-2015, Escape Studios
 
 Unless otherwise noted, all files are released under the MIT license,
 possible exceptions will contain licensing information in them.

@@ -2,7 +2,7 @@
 # Cookbook Name:: libvpx
 # Recipe:: source
 #
-# Copyright 2014, Escape Studios
+# Copyright 2014-2015, Escape Studios
 #
 
 include_recipe 'build-essential'
