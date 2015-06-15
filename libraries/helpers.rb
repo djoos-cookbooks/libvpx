@@ -2,7 +2,7 @@
 # Cookbook Name:: libvpx
 # Library:: helpers
 #
-# Copyright 2014, Escape Studios
+# Copyright 2014-2015, Escape Studios
 #
 
 # libvpx module

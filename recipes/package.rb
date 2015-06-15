@@ -2,7 +2,7 @@
 # Cookbook Name:: libvpx
 # Recipe:: package
 #
-# Copyright 2014, Escape Studios
+# Copyright 2014-2015, Escape Studios
 #
 
 libvpx_packages.each do |pkg|
