@@ -5,7 +5,7 @@
 # Copyright 2014-2015, Escape Studios
 #
 
-libvpx_packages.each do |pkg|
+node['libvpx']['packages'].each do |pkg|
   package pkg do
     action :upgrade
   end
