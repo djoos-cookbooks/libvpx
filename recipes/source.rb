@@ -20,14 +20,12 @@ creates_libvpx = "#{node['libvpx']['prefix']}/bin/vpxenc"
 
 file creates_libvpx do
   action :nothing
-  subscribes :delete, 'bash[compile_libvpx]', :immediately
 end
 
 git "#{Chef::Config[:file_cache_path]}/libvpx" do
   repository node['libvpx']['git_repository']
   reference node['libvpx']['git_revision']
   action :sync
-  notifies :delete, "file[#{creates_libvpx}]", :immediately
 end
 
 # Write the flags used to compile the application to Disk. If the flags
