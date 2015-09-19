@@ -13,4 +13,3 @@ suites:
   - name: default
     run_list:
       - recipe[libvpx::default]
-    attributes:
